@@ -57,14 +57,14 @@ int main (void) {
    if (tipoWait == 0){
         //Busy wait
         while(true){
-            cout << "Sinal ainda nao foi recebido !!!\n";
+            cout << "Sinal ainda nao foi recebido -- busy wait\n";
         }
 
     }else{
 
         //Blocking Wait
         while(true) {
-            cout << "Sinal ainda nao foi recebido...\n";
+            cout << "Sinal ainda nao foi recebido -- blocking wait\n";
             sleep(2);
         }
 
