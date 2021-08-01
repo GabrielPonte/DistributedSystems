@@ -6,6 +6,20 @@
 
 using namespace std;
 
+// Mensagem da interface caso ocorra algum problema
+void msgInterface()
+{
+  cout << "Forma de uso: ./emitaSinal" << endl;
+  cout << "Nao e preciso ter nenhum argumento" << endl;
+  cout << "Digite o PID apresentado em ./recebaSinal" << endl;
+  cout << "Digite um sinal pertencente a esta lista abaixo:" << endl;
+  cout << "   1: SIGHUP" << endl;
+  cout << "   2: SIGINT " << endl;
+  cout << "   3: SIGQUIT" << endl;
+  cout << "   4: SIGILL" << endl << endl;
+}
+
+
 int main(void){
 
     int pidNumber; 
@@ -16,12 +30,22 @@ int main(void){
 
     if (kill(pidNumber,0)!=0){
 
-        cout <<"PID nao encontrada.\n";
+        cout <<"PID nao encontrada" << endl << endl;
+        msgInterface();
         return PID_NAO_ENCONTRADO; 
     }
 
-    cout << "Sinal a emitir: ";
-    cin >> sinal;
+    while(true){
+        cout << "Sinal que deseja emitir: ";
+        cin  >> sinal;
+
+        if(sinal >= 1 && sinal <= 4){
+            break;
+        }else{
+            msgInterface();
+        }
+    
+    }
 
 
     try{
