@@ -2,7 +2,6 @@
 #include <csignal>
 #include <unistd.h>
 #include <sys/types.h>
-// #include <common.h>
 
 using namespace std;
 
@@ -24,20 +23,24 @@ void signalHandler(int signalNumber) {
    switch(signalNumber) {
     case 1:
         sleep(2);
-        cout << "Sinal recebido: SIGHUP\n";
+        cout << "Sinal recebido: SIGHUP" << endl;
         exit(signalNumber);  
         break; 
     case 2:
         sleep(2);
-        cout << "Sinal recebido: SIGINT\n";
+        cout << "Sinal recebido: SIGINT" << endl;
         exit(signalNumber);  
         break; 
     case 3:
         sleep(2);
-        cout << "Sinal recebido: SIGQUIT\n";
+        cout << "Sinal recebido: SIGQUIT" << endl;
         exit(signalNumber);  
         break; 
-    
+    case 4:
+        sleep(2);
+        cout << "Sinal recebido: SIGILL" << endl;
+        exit(signalNumber);  
+        break; 
     }
 }
 
@@ -50,6 +53,7 @@ int main (void) {
    signal(SIGHUP, signalHandler);  
    signal(SIGINT, signalHandler);  
    signal(SIGQUIT, signalHandler);   
+   signal(SIGILL, signalHandler);  
 
    cout << "Numero PID: " << pidNumber << "\n\n "; 
    tipoWait = definaTipoWait();
