@@ -22,22 +22,22 @@ void signalHandler(int signalNumber) {
     
    switch(signalNumber) {
     case 1:
-        sleep(2);
+        // sleep(2);
         cout << "Sinal recebido: SIGHUP" << endl;
         exit(signalNumber);  
         break; 
     case 2:
-        sleep(2);
+        // sleep(2);
         cout << "Sinal recebido: SIGINT" << endl;
         exit(signalNumber);  
         break; 
     case 3:
-        sleep(2);
+        // sleep(2);
         cout << "Sinal recebido: SIGQUIT" << endl;
         exit(signalNumber);  
         break; 
     case 4:
-        sleep(2);
+        // sleep(2);
         cout << "Sinal recebido: SIGILL" << endl;
         exit(signalNumber);  
         break; 
