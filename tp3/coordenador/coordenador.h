@@ -1,0 +1,21 @@
+// Macros
+#define SOCKET_PORT 30700
+#define TAMANHO_MAXIMO_MSG 10
+#define MAXIMO_CLIENTES 128
+#define SEPARADOR '|'
+
+// Tipos de mensagem
+#define MESSAGE_REQUEST 1
+#define MESSAGE_GRANT 2
+#define MESSAGE_RELEASE 3
+
+// Return
+#define OK 0
+#define ERRO_ABRIR_SOCKET 1
+#define ERRO_SOCKET_BIND 2
+#define ERRO_RECEBER_SOCKET 3
+#define ERRO_MENSAGEM_DESCONHECIDA 4
+#define ERRO_ACEITAR_SOCKET 5
+#define ERRO_CONFIGURAR_SOCKET 6
+#define ERRO_SOCKET_LISTEN 7
+#define ERRO_UNLOCK_LOCK 8

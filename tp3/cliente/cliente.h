@@ -1,0 +1,17 @@
+// Macros
+#define COORDINATOR_IP "127.0.0.1"
+#define COORDINATOR_PORT 30700
+#define TAMANHO_MAXIMO_MSG 10
+
+// Tipos de mensagem
+#define MESSAGE_REQUEST '1'
+#define MESSAGE_GRANT '2'
+#define MESSAGE_RELEASE '3'
+
+// Return
+#define OK 0
+#define ERRO_ABRIR_SOCKET 1
+#define ERRO_CONECTAR_SOCKET 2
+#define ERRO_RECEBER_SOCKET 3
+#define ERRO_MENSAGEM_DESCONHECIDA 4
+#define ERRO_FORK 5
